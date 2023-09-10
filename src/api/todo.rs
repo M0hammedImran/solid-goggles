@@ -4,14 +4,14 @@ use actix_web::{delete, get, http, patch, post, web, HttpResponse, ResponseError
 use serde::Deserialize;
 use serde_json::json;
 use strum_macros::Display;
-use utoipa::IntoParams;
+use utoipa::{IntoParams, ToSchema};
 
 #[derive(Deserialize, IntoParams)]
 pub struct TodoIdentifier {
     todo_id: i32,
 }
 
-#[derive(Debug, Display)]
+#[derive(Debug, Display, ToSchema)]
 pub enum TodoError {
     TodoNotFound,
     TodoUpdateFailure,
