@@ -1,4 +1,4 @@
 {
-	"cSpell.words": ["chrono", "Timestamptz"]
+	"cSpell.words": ["actix", "chrono", "dotenv", "dotenvy", "sqlx", "Timestamptz"]
 }
 
